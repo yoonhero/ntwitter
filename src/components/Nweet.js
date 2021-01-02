@@ -26,7 +26,12 @@ const Nweet = ({ nweetObj, isOwner }) => {
         } = event;
         setNewNweet(value);
     };
-    const onFilechange = (event) => {};
+    const onFilechange = (event) => {
+        const {
+            target: { files },
+        } = event;
+        const theFile = files[0];
+    };
     return (
         <div>
             {editing ? (
